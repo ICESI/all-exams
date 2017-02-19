@@ -1,0 +1,35 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+ config.vm.define :centos_wb do |wb|
+    wb.vm.box = "centos64_updated4.box"
+    wb.vm.network :private_network, ip: "192.168.56.101"
+    wb.vm.network "public_network", :bridge => "eth3", ip:"192.168.131.21", :auto_config => "false", :netmask => "255.255.255.0"
+    wb.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "1024","--cpus", "1", "--name", "centos_web" ]
+    end
+    config.vm.provision :chef_solo do |chef|
+      chef.cookbooks_path = "cookbooks"
+      #chef.add_recipe "mirror"
+      chef.add_recipe "apache"
+      chef.json ={"aptmirror" => {"server" => "192.168.131.254"}}
+    end
+  end
+  config.vm.define :centos_database do |db|
+    db.vm.box = "centos64_updated4.box"
+    db.vm.network :private_network, ip: "192.168.56.102"
+    db.vm.network "public_network", :bridge => "eth3", ip:"192.168.131.22", :auto_config => "false", :netmask => "255.255.255.0"
+    db.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "1024","--cpus", "1", "--name", "centos_database" ]
+    end
+    config.vm.provision :chef_solo do |chef|
+      chef.cookbooks_path = "cookbooks"
+      #chef.add_recipe "mirror"
+      chef.add_recipe "postgres"
+      chef.json ={"aptmirror" => {"server" => "192.168.131.254"}}
+    end
+  end
+end
