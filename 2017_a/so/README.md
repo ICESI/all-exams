@@ -23,7 +23,7 @@ El primer parcial del cursos sistemas operativos trata sobre el manejo de los co
 3. Seleccione 5 retos de la página https://cmdchallenge.com y presente la solución a cada uno de ellos a través de un ejemplo práctico en CentOS7. Presente capturas de pantalla relevantes como evidencias de lo realizado (20%)
 4. Realice un script que a partir de un listado con no menos de dos direcciones ip, descargue en forma remota un libro del proyecto https://www.gutenberg.org/ en el directorio /tmp de cada equipo. El usuario operativos con contraseña operativos debe existir en las equipos. Presente capturas de pantalla relevantes como evidencias del funcionamiento (30%)
 5. Cree un contenedor de debian en CentOS7 empleando LXC. Presente el listado de los comandos empleados y capturas de pantalla relevantes como evidencias del funcionamiento (30%)
-6. El informe debe ser entregado en formato pdf a través del moodle y el informe en formato README.md debe ser subido a un repositorio de github. El código fuente y la url de github deben incluirse en el informe (10%).   
+6. El informe debe ser entregado en formato pdf a través del moodle y el informe en formato README.md debe ser subido a un repositorio de github. El repositorio de github debe ser un fork de https://github.com/ICESI-Training/so-exam1 y para la entrega deberá hacer un Pull Request (PR) respetando la estructura definida. El código fuente y la url de github deben incluirse en el informe (10%).   
 
 ### Referencias
 * https://cmdchallenge.com  
