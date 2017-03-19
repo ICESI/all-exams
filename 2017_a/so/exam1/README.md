@@ -12,10 +12,10 @@
 
 ### Prerrequisitos
 * Virtualbox o WMWare
-* Máquina virtual con sistema operativo CenOS7
+* Máquina virtual con sistema operativo CentOS7
 
 ### Descripción
-El primer parcial del cursos sistemas operativos trata sobre el manejo de los comandos de Linux, virtualización y el uso de las características de CentOS7
+El primer parcial del curso sistemas operativos trata sobre el manejo de los comandos de Linux, virtualización y el uso de las características de CentOS7
 
 ### Actividades
 1. Incluir nombre, código (5%).
