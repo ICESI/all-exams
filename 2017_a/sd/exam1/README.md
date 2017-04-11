@@ -2,7 +2,7 @@
 **Universidad ICESI**  
 **Curso:** Sistemas Distribuidos  
 **Docente:** Daniel Barragán C.  
-**Tema:** Automatización de infraestructura  
+**Tema:** Automatización de infraestructura (Vagrant+Chef) 
 **Correo:** daniel.barragan at correo.icesi.edu.co
 
 ### Objetivos
