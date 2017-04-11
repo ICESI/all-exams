@@ -21,7 +21,9 @@ El parcial debe realizarse de forma individual, en caso de encontrar copia a otr
 ### Descripción
 Deberá	realizar	el	aprovisionamiento	de	un	ambiente	compuesto	por	los	siguientes	elementos:	un servidor	encargado de	realizar balanceo de	carga,	tres	servidores	web	con páginas estáticas. Se	debe probar	el	funcionamiento	del balanceador	realizando peticiones y mostrando servidores distintos atendiendo las peticiones.
 
-<img src="images/01_diagrama_despliegue.png" width="700" align="center"/>
+<p align="center">
+  <img src="images/01_diagrama_despliegue.png" width="650"/>
+</p>
 
 En el repositorio de github del curso se encuentran ejemplos de docker y docker-compose los cuales pueden ser consultados para construir su solución.
 
