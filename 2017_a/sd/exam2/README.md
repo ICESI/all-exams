@@ -21,9 +21,9 @@ El parcial debe realizarse de forma individual, en caso de encontrar copia a otr
 ### Descripción
 Deberá	realizar	el	aprovisionamiento	de	un	ambiente	compuesto	por	los	siguientes	elementos:	un servidor	encargado de	realizar balanceo de	carga,	tres	servidores	web	con páginas estáticas. Se	debe probar	el	funcionamiento	del balanceador	realizando peticiones y mostrando servidores distintos atendiendo las peticiones.
 
-![][1]
+<img src="images/01_diagrama_despliegue.png" width="700" align="center"/>
 
-En el repositorio de github del curso se encuentran ejemplos de docker y docker-compose los cuales pueden ser consultados para construir su soución.
+En el repositorio de github del curso se encuentran ejemplos de docker y docker-compose los cuales pueden ser consultados para construir su solución.
 
 ### Actividades
 En un documento en formato PDF cuyo nombre de
@@ -43,5 +43,3 @@ archivo debe ser examen2_codigoestudiante.pdf debe incluir lo siguiente:
 ### Referencias
 * https://github.com/rhcarvalho/byzanz-gui
 * https://docs.docker.com/
-
-[1]: images/01_diagrama_despliegue.png
