@@ -2,7 +2,7 @@
 **Universidad ICESI**  
 **Curso:** Sistemas Distribuidos  
 **Docente:** Daniel Barragán C.  
-**Tema:** Automatización de infraestructura (Docker)  
+**Tema:** Infraestructura como código (Docker/Vagrant-Chef)  
 **Correo:** daniel.barragan at correo.icesi.edu.co
 
 ### Objetivos
