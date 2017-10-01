@@ -39,7 +39,7 @@ archivo debe ser examen1_codigoestudiante.pdf debe incluir lo siguiente:
 3. Escriba el archivo Vagrantfile para realizar el aprovisionamiento, teniendo en cuenta definir:
 maquinas a aprovisionar, interfaces solo anfitrión, interfaces tipo puente, declaración de cookbooks, variables necesarias para plantillas (10%)
 4. Escriba los cookbooks necesarios para realizar la instalación de los servicios solicitados (20%)
-5. Publicar en un repositorio de github los archivos para el aprovisionamiento junto con un archivo de extensión .md donde explique brevemente como realizar el aprovisionamiento (15%)
+5. El informe debe publicarse en un repositorio de github el cual debe ser un fork de https://github.com/ICESI-Training/sd-exam1 y para la entrega deberá hacer un Pull Request (PR) respetando la estructura definida. El código fuente y la url de github deben incluirse en el informe (15%). Tenga en cuenta publicar los archivos para el aprovisionamiento
 6. Incluya evidencias que muestran el funcionamiento de lo solicitado (15%)
 7. Documente algunos de los problemas encontrados y las acciones efectuadas para su solución al aprovisionar la infraestructura y aplicaciones (10%)
 
