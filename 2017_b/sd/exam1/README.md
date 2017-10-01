@@ -25,6 +25,8 @@ Deberá	realizar	el	aprovisionamiento	de	un	ambiente	compuesto	por	los	siguiente
 
 ![][1]
 
+En el repositorio de github del curso se encuentran ejemplos de vagrant y chef los cuales pueden ser consultados para construir su solución.
+
 ### Actividades
 En un documento en formato PDF cuyo nombre de
 archivo debe ser examen1_codigoestudiante.pdf debe incluir lo siguiente:
@@ -45,5 +47,6 @@ maquinas a aprovisionar, interfaces solo anfitrión, interfaces tipo puente, dec
 * https://docs.chef.io/
 * http://developerlover.com/monitorizacion-logs-stack-elk-elasticsearch-logstash-kibana/  
 * https://github.com/ICESI/so-monitoring
+* https://www.draw.io
 
-[1]: images/01_diagrama_despliegue.png  
+[1]: images/ELKStack.jpg

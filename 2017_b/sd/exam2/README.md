@@ -8,7 +8,7 @@
 ### Objetivos
 * Realizar de forma autónoma el aprovisionamiento automático de infraestructura
 * Diagnosticar y ejecutar de forma autónoma las acciones necesarias para lograr infraestructuras estables
-* Integrar servicios ejecutandose en nodos distintos
+* Integrar servicios ejecutándose en nodos distintos
 
 ### Prerrequisitos
 * Docker
@@ -23,9 +23,10 @@ infraestructura.
 
 Deberá	realizar	el	aprovisionamiento	de	un	ambiente	compuesto	por	los	siguientes	elementos:
 
-En un servidor ejecutar: Un contenedor encargado de almacenar logs por medio de la aplicación Elasticsearch, un contenedor encargado de hacer la conversión de logs por medio de la aplicación Logstash, un contenedor con la herramienta encargada de visualizar la información de los logs por medio de la aplicación Kibana
+* En un servidor ejecutar: Un contenedor encargado de almacenar logs por medio de la aplicación Elasticsearch, un contenedor con la herramienta encargada de visualizar la información de los logs por medio de la aplicación Kibana
+* En uno o varios servidores ejecutar: un contenedor web y un contenedor encargado de hacer la conversión de logs por medio de la aplicación Fluentd
 
-En uno o varios servidores ejecutar: un contenedor web y un contenedor ejecutando la aplicación ...
+![][1]
 
 En el repositorio de github del curso se encuentran ejemplos de docker y docker-compose los cuales pueden ser consultados para construir su solución.
 
@@ -39,11 +40,15 @@ archivo debe ser examen2_codigoestudiante.pdf debe incluir lo siguiente:
   * Ortografía y redacción (5%)
 2. Consigne los comandos de linux necesarios para el aprovisionamiento de los servicios solicitados. En este punto no debe incluir archivos tipo Dockerfile solo se requiere que usted identifique los comandos o acciones que debe automatizar (15%)
 3. Escriba los archivos Dockerfile para cada uno de los servicios solicitados junto con los archivos fuente necesarios. Tenga en cuenta consultar buenas prácticas para la elaboración de archivos Dockerfile. (20%)
-4. Escriba el archivo docker-compose.yml necesario para el despliegue de la infraestructura (10%)
+4. Escriba el archivo docker-compose.yml necesario para el despliegue de la infraestructura (10%). No emplee configuraciones deprecated.
 5. Publicar en un repositorio de github los archivos para el aprovisionamiento junto con un archivo de extensión .md donde explique brevemente como realizar el aprovisionamiento (15%)
 6. Incluya evidencias que muestran el funcionamiento de lo solicitado (15%)
 7. Documente algunos de los problemas encontrados y las acciones efectuadas para su solución al aprovisionar la infraestructura y aplicaciones (10%)
 
 ### Referencias
 * https://github.com/rhcarvalho/byzanz-gui
+* https://docs.fluentd.org/v0.12/articles/docker-logging-efk-compose
 * https://docs.docker.com/
+* https://www.draw.io
+
+[1]: images/ELKStackDocker.jpg
