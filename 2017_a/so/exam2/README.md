@@ -18,7 +18,7 @@ El segundo parcial del curso sistemas operativos trata sobre el diseño e implem
 
 Cree un usuario de nombre check_user. Las acciones descritas en el contrato a continuación se deben realizar como el usuario check_user.
 
-Implemente un proceso que se ejecute en background, el cual debe consultar y almacenarr en una base de datos sqlite los siguientes valores (checks): consumo de memoria RAM, consumo de CPU, espacio disponible en disco, estado de un servicio de su elección (httpd, sshd, etc). El proceso debe consultar los valores cada 60 segundos. Los valores almacenados en la base de datos deben tener una rotación al alcanzar los 100 registros.  
+Implemente un proceso que se ejecute en background, el cual debe consultar y almacenar en una base de datos sqlite los siguientes valores (checks): consumo de memoria RAM, consumo de CPU, espacio disponible en disco, estado de un servicio de su elección (httpd, sshd, etc). El proceso debe consultar los valores cada 60 segundos. Los valores almacenados en la base de datos deben tener una rotación al alcanzar los 100 registros.  
 
 Tenga en cuenta almacenar en una tabla de la base de datos sqlite los nombres de los checks (cpu, memory, disk, httpd).
 
