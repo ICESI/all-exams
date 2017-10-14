@@ -8,7 +8,7 @@
 ### Objetivos
 * Conocer y emplear comandos de Linux para la realización de tareas administrativas
 * Virtualizar un sistema operativo
-* Conocer y emplear capacidades de CentOS7 para la vitualización
+* Conocer y emplear capacidades de CentOS7 para la virtualización
 
 ### Prerrequisitos
 * Virtualbox o WMWare
