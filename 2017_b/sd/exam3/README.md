@@ -2,7 +2,7 @@
 **Universidad ICESI**  
 **Curso:** Sistemas Distribuidos  
 **Docente:** Daniel Barragán C.  
-**Tema:** Descubrimiento de servicios
+**Tema:** Descubrimiento de servicios  
 **Correo:** daniel.barragan at correo.icesi.edu.co
 
 ### Objetivos
