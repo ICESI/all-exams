@@ -1,0 +1,16 @@
+input {
+    beats {
+        port => "5044"
+    }
+}
+filter {
+    grok {
+        match => { "message" => "%{COMBINEDAPACHELOG}"}
+    }
+}
+output {
+    elasticsearch
+    {
+        hosts => ["<%= @direccion_ip %>:9200"]
+    }
+}
