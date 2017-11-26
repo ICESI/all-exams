@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!--<h1><%= @course_name %></h1>-->
+    <% @courses.each do |course| %>
+       <h1><%= course[:id] %> - <%= course[:name] %></h1>
+    <% end %>
+  </body>
+</html>

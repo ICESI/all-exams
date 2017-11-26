@@ -1,0 +1,82 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.ssh.insert_key = false
+  config.vm.define :elastic_search do |es|
+    es.vm.box = "centos/7"
+    es.vm.network :private_network, ip: "192.168.56.101"
+	#es.vm.network "public_network", bridge: "eth4", ip:"192.168.131.100", netmask: "255.255.255.0"
+    es.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "1024","--cpus", "1", "--name", "es" ]
+    end
+	
+	#config.vm.provision "shell", inline: <<-SHELL
+    #  sudo yum install screen -y
+    #SHELL
+    config.vm.provision :chef_solo do |chef|
+      chef.install = false
+      chef.cookbooks_path = "cookbooks"
+      chef.add_recipe "elastic_search"
+	  #chef.add_recipe "haproxy"
+	  #chef.json = {"courses":[
+        #{"id":"001", "name":"Sistemas distribuídos-s1" },
+        #{"id":"002", "name":"Redes convergentes-s1" },
+        #{"id":"003", "name":"Computación en la nube-s1" },
+        #{"id":"004", "name":"Sistemas operativos-s1" }
+      #]}
+	  chef.json = {"ip" => "192.168.56.101"}
+    end
+  end
+  
+  config.vm.define :logstash_server do |ls|
+    ls.vm.box = "centos/7"
+    ls.vm.network :private_network, ip: "192.168.56.102"
+	#wb.vm.network "public_network", bridge: "eth4", ip:"192.168.131.100", netmask: "255.255.255.0"
+    ls.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "1024","--cpus", "1", "--name", "ls" ]
+    end
+
+    config.vm.provision :chef_solo do |chef|
+      chef.install = false
+      chef.cookbooks_path = "cookbooks"
+      chef.add_recipe "logstash"
+      chef.json = {"ip" => "192.168.56.102"}
+    end
+  end
+
+  config.vm.define :kibana_server do |ks|
+    ks.vm.box = "centos/7"
+    ks.vm.network :private_network, ip: "192.168.56.103"
+	#wb.vm.network "public_network", bridge: "eth4", ip:"192.168.131.100", netmask: "255.255.255.0"
+    ks.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "1024","--cpus", "1", "--name", "ks" ]
+    end
+    config.vm.provision :chef_solo do |chef|
+      chef.install = false
+      chef.cookbooks_path = "cookbooks"
+      chef.add_recipe "kibana"
+	  #chef.add_recipe "haproxy"
+      chef.json = {"ip" => "192.168.56.103", "url" => "http://192.168.56.101:9200"}
+    end
+  end
+
+  config.vm.define :web_server do |wb1|
+    wb1.vm.box = "centos/7"
+    wb1.vm.network :private_network, ip: "192.168.56.104"
+	#wb.vm.network "public_network", bridge: "eth4", ip:"192.168.131.100", netmask: "255.255.255.0"
+    wb1.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "1024","--cpus", "1", "--name", "wb1" ]
+    end
+
+    config.vm.provision :chef_solo do |chef|      
+      chef.install = false
+      chef.cookbooks_path = "cookbooks"
+      chef.add_recipe "httpd"
+      chef.add_recipe "filebeat"
+      chef.json = {"ip" => "192.168.56.104"}
+    end
+  end
+end
