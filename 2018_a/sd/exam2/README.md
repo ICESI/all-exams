@@ -16,7 +16,7 @@
 * docker swam
 
 ### Descripción
-Desplegar un ambiente compuesto por elasticsearch, kibana, fluentd y un servicio web de su elección con al menos 4 replicas. Cada una de las replicas del servicio web debe estar limitada a un uso del 10% de cpu y 20Mb de memoria RAM. El despliegue debe hacerse sobre un cluster de docker swarm con 3 nodos (incluyendo el maestro)
+Desplegar un ambiente compuesto por elasticsearch, kibana, fluentd y un servidor web apache o un servicio web de su elección. El servidor ó servicio web debe desplegar al menos 4 replicas y debe ser accedido a través de un punto único de balanceo de carga (consulte el manual de referencia de docker-compose 3 ó superior). Cada una de las replicas del servicio web debe estar limitada a un uso del 10% de cpu y 20Mb de memoria RAM. En el caso de usar el contenedor de servidor web deberá almacenar en elasticsearch los campos del log de apache en forma independiente (consulte el  manual de fluentd, parser-plugin).   
 
 ### Actividades
 1. Documento en formato PDF:  
