@@ -67,13 +67,13 @@ El segundo parcial del curso sistemas operativos trata sobre el empleo de comand
   ```
   python courses.py
   ```
-6. Realice una aplicación que cumpla las siguientes características (30%)
+7. Realice una aplicación que cumpla las siguientes características (30%)
  * Se debe ejecutar en background a las 8:00am todos los días, consulte el manual de crontab
  * Se debe ejecutar como una aplicación de linea de comandos usando https://pythonhosted.org/pyCLI/
  * Debe obtener los valores de procesador, memoria y disco disponibles usando https://pypi.python.org/pypi/psutil/4.3.0
  * Debe publicar en un canal de slack los valores de porcentaje de cpu, memoria y disco disponibles usando  https://github.com/slackapi/python-slackclient
  * Incluya el código fuente de la aplicación en un directorio de nombre codigo_punto6, incluya además capturas de pantalla como evidencia.
-7. El informe debe ser subido a un repositorio de github en formato README.md. El repositorio de github debe ser un fork de https://github.com/ICESI-Training/so-exam2 y para la entrega deberá hacer un Pull Request (PR) respetando la estructura definida. La url del repositorio de github debe incluirse en el informe (10%)  
+8. El informe debe ser subido a un repositorio de github en formato README.md. El repositorio de github debe ser un fork de https://github.com/ICESI-Training/so-exam2 y para la entrega deberá hacer un Pull Request (PR) respetando la estructura definida. La url del repositorio de github debe incluirse en el informe (10%)  
 
 ### Nota
 * Cada commit debe seguir las buenas prácticas indicadas en clase
