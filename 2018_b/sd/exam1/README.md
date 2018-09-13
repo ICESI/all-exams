@@ -26,17 +26,23 @@ Deberá desplegar una plataforma que cumpla con los siguientes requerimientos:
   * CentOS7 CI server
   * CentOS7 mirror server
   * CentOS7 client
-* Deberá tener un listado de los paquetes a instalar en el mirror en un archivo llamado packages.json en la raíz del repositorio
-* Este listado debe ser usado para inyectar la lista de paquetes en el recurso de chef correspondiente encargado de hacer la descarga de los mismos. Al momento de ejecutar el comando vagrant up, el aprovisionamiento deberá usar el contenido del archivo packages.json para hacer la descarga de los paquetes a almacenar en el mirror.
-* Deberá realizar la configuración de un Webhook en su repositorio de Github para que al momento de abrir un Pull Request a la rama master, se envie la información del repositorio a un endpoint en el CentOS7 CI server
+* El CentOS7 DHCP server deberá entregar una dirección IP a las demas máquinas virtuales a través de una interfaz pública
+* Deberá tener un listado de los paquetes a instalar en el CentOS7 mirror server en un archivo llamado packages.json en la raíz del repositorio
+* Este listado debe ser usado para inyectar la lista de paquetes en el recurso de chef correspondiente encargado de hacer la descarga de los mismos. Al momento de ejecutar el comando vagrant up, el aprovisionamiento deberá usar el contenido del archivo packages.json para hacer la descarga de los paquetes a almacenar en el CentOS7 mirror server.
+* Deberá realizar la configuración de un webhook en su repositorio de Github para que al momento de abrir un Pull Request a la rama master, se envie la información del repositorio a un endpoint en el CentOS7 CI server
 * El CentOS7 CI server deberá contener una aplicación desarrollada en Flask o en algun framework de su preferencia (emplear arquitectura RESTful) con un endpoint para recibir la información desde Github
 * El CentOS7 CI server realizará las siguientes tareas dentro de la lógica del endpoint:
  * El CentOS7 CI server deberá leer el archivo packages.json con el listado de los paquetes a descargar en el CentOS7 mirror server
- * El archivo packages.json deberá ser interpretado por el CentOS7 CI Server y de forma remota deberá ejecutar los comandos necesarios para hacer la actualización de los paquetes del mirror
+ * El archivo packages.json deberá ser interpretado por el CentOS7 CI Server y de forma remota deberá ejecutar los comandos necesarios para hacer la actualización de los paquetes del CentOS7 mirror server
  * Si los comandos se ejecutan exitosamente se deberá colocar un mensaje de actualización existosa en el Pull Request, de lo contrario se deberá colocar un mensaje con la información del fallo
 * Deberá realizar la comprobación en el CentOS7 client de que el paquete ha sido añadido exitosamente en el CentOS7 mirror server
 
 ![][1]
+
+### Opcional
+* Configurar un servidor DNS y registrar un subdominio para el CentOS7 mirror server
+* Reservar una dirección IP en el CentOS7 DHCP server para el CentOS7 mirror server
+* Si configura la direccion IP del servidor DNS correctamente en el CentOS7 client, no será necesario modificar el archivo /etc/hosts para obtener un ping exitoso al subdominio del CentOS7 mirror server
 
 ### Actividades
 1. Documento README.md en formato markdown:  
