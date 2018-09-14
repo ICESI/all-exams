@@ -20,29 +20,30 @@
 ### Descripción
 Deberá desplegar una plataforma que cumpla con los siguientes requerimientos:
 
-* Debe tener un repositorio de Github que corresponda a un fork del repositorio sd2018b-exam1
+* Debe tener un repositorio de Github que corresponda a un fork del repositorio **sd2018b-exam1**
 * El repositorio debe tener un Vagrantfile que permita el despliegue de tres máquinas virtuales con las siguientes características:
-  * CentOS7 DHCP server
-  * CentOS7 CI server
-  * CentOS7 mirror server
-  * CentOS7 client
-* El CentOS7 DHCP server deberá entregar una dirección IP a las demas máquinas virtuales a través de una interfaz pública
-* Deberá tener un listado de los paquetes a instalar en el CentOS7 mirror server en un archivo llamado packages.json en la raíz del repositorio
-* Este listado debe ser usado para inyectar la lista de paquetes en el recurso de chef correspondiente encargado de hacer la descarga de los mismos. Al momento de ejecutar el comando vagrant up, el aprovisionamiento deberá usar el contenido del archivo packages.json para hacer la descarga de los paquetes a almacenar en el CentOS7 mirror server.
-* Deberá realizar la configuración de un webhook en su repositorio de Github para que al momento de abrir un Pull Request a la rama master, se envie la información del repositorio a un endpoint en el CentOS7 CI server
-* El CentOS7 CI server deberá contener una aplicación desarrollada en Flask o en algun framework de su preferencia (emplear arquitectura RESTful) con un endpoint para recibir la información desde Github
-* El CentOS7 CI server realizará las siguientes tareas dentro de la lógica del endpoint:
- * El CentOS7 CI server deberá leer el archivo packages.json con el listado de los paquetes a descargar en el CentOS7 mirror server
- * El archivo packages.json deberá ser interpretado por el CentOS7 CI Server y de forma remota deberá ejecutar los comandos necesarios para hacer la actualización de los paquetes del CentOS7 mirror server
+  * CentOS7 DHCP Server
+  * CentOS7 CI Server
+  * CentOS7 YUM Mirror Server
+  * CentOS7 YUM Client
+* El **CentOS7 DHCP Server** deberá entregar una dirección IP a las demas máquinas virtuales a través de una interfaz pública
+* Deberá tener un listado de los paquetes a instalar en el **CentOS7 YUM Mirror Server** en un archivo llamado **packages.json** en la raíz del repositorio
+* Este listado debe ser usado para inyectar la lista de paquetes en el recurso de chef correspondiente encargado de hacer la descarga de los mismos. Al momento de ejecutar el comando vagrant up, el aprovisionamiento deberá usar el contenido del archivo **packages.json** para hacer la descarga de los paquetes a almacenar en el **CentOS7 YUM Mirror Server**.
+* Deberá realizar la configuración de un webhook en su repositorio de Github para que al momento de abrir un Pull Request a la rama master, se envie la información del repositorio a un endpoint en el **CentOS7 CI Server**
+* El **CentOS7 CI Server** deberá contener una aplicación desarrollada en Flask o en algún framework de su preferencia (emplear arquitectura RESTful) con un endpoint para recibir la información desde Github
+* El **CentOS7 CI Server** realizará las siguientes tareas dentro de la lógica del endpoint:
+ * El **CentOS7 CI Server** deberá leer el archivo **packages.json** con el listado de los paquetes a descargar en el **CentOS7 YUM Mirror Server**
+ * El archivo **packages.json** deberá ser interpretado por el **CentOS7 CI Server** y de forma remota deberá ejecutar los comandos necesarios para hacer la actualización de los paquetes del **CentOS7 YUM Mirror Server**
  * Si los comandos se ejecutan exitosamente se deberá colocar un mensaje de actualización existosa en el Pull Request, de lo contrario se deberá colocar un mensaje con la información del fallo
-* Deberá realizar la comprobación en el CentOS7 client de que el paquete ha sido añadido exitosamente en el CentOS7 mirror server
+* Deberá realizar la comprobación en el **CentOS7 YUM Client** de que el paquete ha sido añadido exitosamente en el **CentOS7 YUM Mirror Server**
 
 ![][1]
+**Figura 1**. Diagrama de Despliegue
 
 ### Opcional
-* Configurar un servidor DNS y registrar un subdominio para el CentOS7 mirror server
-* Reservar una dirección IP en el CentOS7 DHCP server para el CentOS7 mirror server
-* Si configura la direccion IP del servidor DNS correctamente en el CentOS7 client, no será necesario modificar el archivo /etc/hosts para obtener un ping exitoso al subdominio del CentOS7 mirror server
+* Configurar un servidor DNS y registrar un subdominio para el **CentOS7 YUM Mirror Server**
+* Reservar una dirección IP en el **CentOS7 DHCP Server** para el **CentOS7 YUM Mirror Server**
+* Si configura la direccion IP del servidor DNS correctamente en el **CentOS7 YUM Client**, no será necesario modificar el archivo /etc/hosts para obtener un ping exitoso al subdominio del **CentOS7 YUM Mirror Server**
 
 ### Actividades
 1. Documento README.md en formato markdown:  
