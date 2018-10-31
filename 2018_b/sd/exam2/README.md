@@ -1,4 +1,4 @@
-### Examen 1
+### Examen 2
 **Universidad ICESI**  
 **Curso:** Sistemas Distribuidos  
 **Docente:** Daniel Barragán C.  
@@ -43,7 +43,7 @@ la version y el tipo (Docker ó AMI) y en su lógica realice la construcción de
 * En lugar de una máquina virtual de CentOS7 para alojar el CI server,  emplear la imagen de Docker de Docker hub para el ejecución de la API (webhook listener) y la generación del artefacto: https://hub.Docker.com/_/Docker/ (opcional).
 
 ![][1]
-**Figura 1**. Diagrama de Despliegue
+**Figura 1**. Diagrama de Entrega Continua
 
 ### Actividades
 1. Documento README.md en formato markdown:  
@@ -64,4 +64,4 @@ la version y el tipo (Docker ó AMI) y en su lógica realice la construcción de
 * http://flask.pocoo.org/
 * https://connexion.readthedocs.io/en/latest/
 
-[1]: images/01_diagrama_despliegue.png
+[1]: images/01_diagrama_delivery.png
