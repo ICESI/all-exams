@@ -6,9 +6,11 @@
 **Correo:** daniel.barragan at correo.icesi.edu.co
 
 ### Objetivos
-* Realizar de forma autónoma el aprovisionamiento automático de infraestructura
+* Identificar los componentes de un cluster de kubernetes
+* Desplegar un cluster de kubernetes
+* Desplegar aplicaciones en un cluster de kubernetes empleando sus propiedades
+de volumenes persistentes, balanceo de carga y descubrimiento de servicio
 * Diagnosticar y ejecutar de forma autónoma las acciones necesarias para lograr infraestructuras estables
-* Integrar servicios ejecutándose en nodos distintos
 
 ### Prerrequisitos
 * Linux
