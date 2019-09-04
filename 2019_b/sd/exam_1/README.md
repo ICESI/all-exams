@@ -18,7 +18,7 @@
 ### Descripción
 Deberá desplegar una plataforma que cumpla con los siguientes requerimientos:
 
-* Debe tener un repositorio de Github que corresponda a un fork del repositorio **sd2019a-exam1**.
+* Debe tener un repositorio de Github que corresponda a un fork del repositorio **sd2019b-exam1**.
 * El repositorio debe tener un Vagrantfile que permita el despliegue de cuatro máquinas virtuales que cumpliran las siguientes funciones:
   * CentOS7 Load Balancer
   * CentOS7 Webserver 1
@@ -47,7 +47,7 @@ Deberá desplegar una plataforma que cumpla con los siguientes requerimientos:
 3. Documentación del procedimiento para el aprovisionamiento de los servidores web (10%). Evidencias del funcionamiento (5%).
 4. Documentación del procedimiento para el aprovisionamiento de la base de datos (10%). Evidencias del funcionamiento (5%).
 5. Documentación de las tareas de integración (10%). Evidencias de la integración (10%).
-6. El informe debe publicarse en un repositorio de github el cual debe ser un fork de https://github.com/ICESI-Training/sd2019a-exam1 y para la entrega deberá hacer un Pull Request (PR) al upstream (10%). Tenga en cuenta que el repositorio debe contener todos los archivos necesarios para el aprovisionamiento.
+6. El informe debe publicarse en un repositorio de github el cual debe ser un fork de https://github.com/ICESI-Training/sd2019b-exam1 y para la entrega deberá hacer un Pull Request (PR) al upstream (10%). Tenga en cuenta que el repositorio debe contener todos los archivos necesarios para el aprovisionamiento.
 7. Documente algunos de los problemas encontrados y las acciones efectuadas para su solución al aprovisionar la infraestructura y aplicaciones (10%).
 
 ### Referencias
