@@ -24,7 +24,7 @@ For this exam you should redesing the application developed in midterm 1 into a 
 * It is suggested to use mlab for data storage: mlab is a database as a service provider for mongo databases.
 * The system must accept Http requests from cURL (you can use other REST clients like postman, insomnia or postwoman.
 * The application must have an endpoint to inser data in the database.
-* The apllication mus have an endpoint to retrieve all the registers from a database collection or table.
+* The application must have an endpoint to retrieve all the registers from a database collection or table.
 * The design must have continous integration unit tests for all microservices.
 
 
